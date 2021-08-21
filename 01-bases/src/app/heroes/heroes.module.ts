@@ -12,7 +12,7 @@ import { ListadoComponent } from './listado/listado.component';
         ListadoComponent
     ],
     imports:[ //Modulos de Angular a usar
-        CommonModule
+        CommonModule ///Ofrece directivas como el ngIf y el ngFor
     ]
 
 })
