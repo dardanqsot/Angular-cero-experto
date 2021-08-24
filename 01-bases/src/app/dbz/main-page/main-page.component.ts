@@ -1,9 +1,6 @@
 import { Component} from '@angular/core';
+import { Personaje } from '../interfaces/dbz.interface';
 
-interface Personaje {
-  nombre: string;
-  poder: number;
-}
 
 @Component({
   selector: 'app-main-page',
@@ -22,21 +19,9 @@ export class MainPageComponent {
     }
   ];
   
-  nuevo:Personaje = {
-    nombre: '',
-    poder: 0 
+  nuevo: Personaje = {
+    nombre: 'Maestro Roshi',
+    poder: 1000
   }
 
-   agregar() {
-     //event.preventDefault(); /// para prevenir recarga pero solo en javascript recibiendo $event como prametro con angular es mas rápido
-     if( this.nuevo.nombre.trim().length === 0) {
-       return;
-     }
-
-     this.personajes.push( this.nuevo );
-     this.nuevo = {
-      nombre: '',
-      poder: 0
-    }
-   }
 }
